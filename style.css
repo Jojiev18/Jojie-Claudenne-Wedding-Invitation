@@ -1,0 +1,2268 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap');
+
+
+:root {
+
+  /* Main wedding palette */
+
+  --sage: #7d8766;
+  --sage-dark: #5d674c;
+  --sage-soft: #aab094;
+
+  --blush: #dfb7ad;
+  --blush-light: #f2ded8;
+  --blush-soft: #f8ebe6;
+
+  --ivory: #fffaf2;
+  --cream: #f8f0df;
+  --paper: #fffdf8;
+
+  --gold: #b9914b;
+  --gold-light: #d4b875;
+
+  --ink: #4c4138;
+  --ink-soft: #75685e;
+
+  --white: #ffffff;
+
+  --success: #65724f;
+  --danger: #a15e5e;
+
+  --border: rgba(185, 145, 75, 0.35);
+
+  --shadow:
+    0 25px 70px rgba(76, 65, 56, 0.18);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  color: var(--ink);
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(223, 183, 173, 0.38),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(125, 135, 102, 0.20),
+      transparent 32%
+    ),
+
+    linear-gradient(
+      145deg,
+      #f9eee8 0%,
+      #eee4d7 45%,
+      #e3ded0 100%
+    );
+
+}
+
+
+button,
+input {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+/* ========================= */
+/* MAIN CARD                 */
+/* ========================= */
+
+
+.page-shell {
+
+  width: min(100%, 820px);
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: 36px 18px;
+
+}
+
+
+.invitation-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(185, 145, 75, 0.55);
+
+  border-radius: 28px;
+
+  background:
+    var(--ivory);
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+/* ========================= */
+/* HERO                      */
+/* ========================= */
+
+
+.hero {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    62px 42px
+    52px;
+
+  color:
+    var(--ink);
+
+  text-align:
+    center;
+
+  background:
+
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(223, 183, 173, 0.55),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 95% 95%,
+      rgba(125, 135, 102, 0.16),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      150deg,
+      #fffaf2,
+      #f8e7df 55%,
+      #faf4e8
+    );
+
+}
+
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 16px;
+
+  pointer-events: none;
+
+  border:
+    1px solid rgba(185, 145, 75, 0.34);
+
+  border-radius: 18px;
+
+}
+
+
+.hero-decoration {
+
+  position: absolute;
+
+  width: 160px;
+
+  height: 160px;
+
+  border-radius: 50%;
+
+  opacity: 0.20;
+
+  filter: blur(1px);
+
+}
+
+
+.hero-decoration-left {
+
+  top: -65px;
+
+  left: -45px;
+
+  background:
+    radial-gradient(
+      circle,
+      var(--blush),
+      transparent 68%
+    );
+
+}
+
+
+.hero-decoration-right {
+
+  right: -70px;
+
+  bottom: -80px;
+
+  background:
+    radial-gradient(
+      circle,
+      var(--sage),
+      transparent 68%
+    );
+
+}
+
+
+/* MONOGRAM */
+
+
+.monogram {
+
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  width: 72px;
+  height: 72px;
+
+  margin:
+    0 auto
+    22px;
+
+  color:
+    var(--gold);
+
+  border:
+    1px solid var(--gold-light);
+
+  border-radius:
+    50%;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.25rem;
+
+}
+
+
+.monogram::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 5px;
+
+  border:
+    1px dotted
+    rgba(185,145,75,0.55);
+
+  border-radius:
+    50%;
+
+}
+
+
+.monogram span,
+.monogram i {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+}
+
+
+.monogram i {
+
+  color:
+    var(--blush);
+
+  font-size:
+    0.55rem;
+
+  font-style:
+    normal;
+
+}
+
+
+/* HERO TEXT */
+
+
+.eyebrow {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  margin:
+    0 0 14px;
+
+  color:
+    var(--sage-dark);
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.32em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.hero h1 {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  margin:
+    0;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      3rem,
+      10vw,
+      5.5rem
+    );
+
+  font-style:
+    italic;
+
+  font-weight:
+    500;
+
+  line-height:
+    0.92;
+
+}
+
+
+.hero h1 span {
+
+  color:
+    var(--sage);
+
+  font-size:
+    0.65em;
+
+  margin:
+    0 5px;
+
+}
+
+
+.wedding-divider {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  margin:
+    27px auto;
+
+  color:
+    var(--blush);
+
+}
+
+
+.wedding-divider span {
+
+  width:
+    72px;
+
+  height:
+    1px;
+
+  background:
+    var(--gold-light);
+
+}
+
+
+.wedding-divider b {
+
+  color:
+    var(--sage);
+
+  font-size:
+    0.9rem;
+
+}
+
+
+/* ========================= */
+/* WEDDING DETAILS           */
+/* ========================= */
+
+
+.wedding-details {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  display:
+    flex;
+
+  align-items:
+    stretch;
+
+  justify-content:
+    center;
+
+  max-width:
+    590px;
+
+  margin:
+    0 auto;
+
+}
+
+
+.wedding-detail {
+
+  flex:
+    1;
+
+  padding:
+    4px 25px;
+
+}
+
+
+.detail-label {
+
+  display:
+    block;
+
+  margin-bottom:
+    8px;
+
+  color:
+    var(--sage);
+
+  font-size:
+    0.60rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.28em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.wedding-detail strong {
+
+  display:
+    block;
+
+  color:
+    var(--ink);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.45rem;
+
+  font-weight:
+    600;
+
+}
+
+
+.wedding-detail small {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  color:
+    var(--ink-soft);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1rem;
+
+  font-style:
+    italic;
+
+}
+
+
+.detail-separator {
+
+  width:
+    1px;
+
+  background:
+    linear-gradient(
+      transparent,
+      var(--gold-light),
+      transparent
+    );
+
+}
+
+
+/* ORNAMENT */
+
+
+.ornament {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  margin:
+    30px auto 20px;
+
+  color:
+    var(--gold);
+
+}
+
+
+.ornament span {
+
+  width:
+    75px;
+
+  height:
+    1px;
+
+  background:
+    var(--gold-light);
+
+}
+
+
+.ornament b {
+
+  color:
+    var(--blush);
+
+  font-size:
+    0.8rem;
+
+}
+
+
+.intro {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  margin:
+    0;
+
+  color:
+    var(--ink);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.35rem;
+
+  line-height:
+    1.55;
+
+}
+
+
+/* ========================= */
+/* SEARCH                    */
+/* ========================= */
+
+
+.search-section,
+.rsvp-panel,
+.confirmation-panel {
+
+  padding:
+    44px 42px;
+
+}
+
+
+.search-section {
+
+  background:
+
+    radial-gradient(
+      circle at top right,
+      rgba(223,183,173,0.18),
+      transparent 30%
+    ),
+
+    var(--ivory);
+
+  border-top:
+    1px solid rgba(185,145,75,0.18);
+
+  border-bottom:
+    1px solid rgba(185,145,75,0.28);
+
+}
+
+
+.section-kicker {
+
+  margin:
+    0 0 7px;
+
+  color:
+    var(--sage);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1rem;
+
+  font-style:
+    italic;
+
+}
+
+
+.search-section label {
+
+  display:
+    block;
+
+  margin-bottom:
+    14px;
+
+  color:
+    var(--ink);
+
+  font-size:
+    0.70rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.24em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.search-row {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto;
+
+  gap:
+    12px;
+
+}
+
+
+/* ========================= */
+/* INPUTS                    */
+/* ========================= */
+
+
+input {
+
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  padding:
+    16px 17px;
+
+  color:
+    var(--ink);
+
+  border:
+    1px solid
+    rgba(185,145,75,0.55);
+
+  border-radius:
+    9px;
+
+  outline:
+    none;
+
+  background:
+    rgba(255,255,255,0.82);
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+
+}
+
+
+input::placeholder {
+
+  color:
+    #aa9c92;
+
+}
+
+
+input:focus {
+
+  border-color:
+    var(--sage);
+
+  background:
+    var(--white);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(125,135,102,0.12);
+
+}
+
+
+/* ========================= */
+/* BUTTONS                   */
+/* ========================= */
+
+
+.search-row button,
+.confirm-button {
+
+  padding:
+    15px 24px;
+
+  color:
+    var(--white);
+
+  border:
+    0;
+
+  border-radius:
+    9px;
+
+  background:
+    var(--sage-dark);
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.06em;
+
+  transition:
+    transform 0.18s,
+    background 0.18s,
+    box-shadow 0.18s;
+
+}
+
+
+.search-row button:hover,
+.confirm-button:hover {
+
+  transform:
+    translateY(-1px);
+
+  background:
+    var(--sage);
+
+  box-shadow:
+    0 8px 20px
+    rgba(93,103,76,0.18);
+
+}
+
+
+.search-row button:disabled,
+.confirm-button:disabled {
+
+  cursor:
+    not-allowed;
+
+  opacity:
+    0.65;
+
+  transform:
+    none;
+
+}
+
+
+/* SEARCH MESSAGE */
+
+
+.status-message {
+
+  min-height:
+    21px;
+
+  margin:
+    14px 0 0;
+
+  color:
+    var(--ink-soft);
+
+  font-size:
+    0.82rem;
+
+}
+
+
+.status-message.success {
+
+  color:
+    var(--success);
+
+  font-weight:
+    600;
+
+}
+
+
+.status-message.error {
+
+  color:
+    var(--danger);
+
+  font-weight:
+    600;
+
+}
+
+
+/* ========================= */
+/* RSVP AREA                 */
+/* ========================= */
+
+
+.rsvp-panel {
+
+  padding:
+    0;
+
+  color:
+    var(--ink);
+
+  background:
+    var(--paper);
+
+}
+
+
+/* RESERVED SEATS */
+
+
+.seat-summary {
+
+  padding:
+    40px 24px;
+
+  text-align:
+    center;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(223,183,173,0.26),
+      transparent 62%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f8eddf,
+      #eee4ce
+    );
+
+  border-bottom:
+    1px solid
+    rgba(185,145,75,0.35);
+
+}
+
+
+.small-flourish {
+
+  margin-bottom:
+    8px;
+
+  color:
+    var(--sage);
+
+  font-size:
+    1.2rem;
+
+}
+
+
+.seat-summary p {
+
+  margin:
+    0;
+
+  color:
+    var(--sage-dark);
+
+  font-size:
+    0.69rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.27em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.seat-summary strong {
+
+  display:
+    block;
+
+  margin:
+    5px 0 2px;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    4.8rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    1;
+
+}
+
+
+.seat-summary span {
+
+  color:
+    var(--ink-soft);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.05rem;
+
+  font-style:
+    italic;
+
+}
+
+
+/* RSVP FORM */
+
+
+#rsvpForm {
+
+  padding:
+    45px 42px
+    46px;
+
+  background:
+
+    radial-gradient(
+      circle at bottom left,
+      rgba(125,135,102,0.10),
+      transparent 30%
+    ),
+
+    var(--ivory);
+
+}
+
+
+.section-heading {
+
+  text-align:
+    center;
+
+}
+
+
+.section-heading h2,
+.confirmation-panel h2 {
+
+  margin:
+    0 0 12px;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    2.2rem;
+
+  font-weight:
+    600;
+
+}
+
+
+.section-heading > p:last-child {
+
+  max-width:
+    570px;
+
+  margin:
+    0 auto 30px;
+
+  color:
+    var(--ink-soft);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.1rem;
+
+  font-style:
+    italic;
+
+  line-height:
+    1.5;
+
+}
+
+
+.mini-divider {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  margin:
+    10px auto 16px;
+
+  color:
+    var(--blush);
+
+}
+
+
+.mini-divider span {
+
+  width:
+    46px;
+
+  height:
+    1px;
+
+  background:
+    var(--gold-light);
+
+}
+
+
+.mini-divider b {
+
+  color:
+    var(--sage);
+
+  font-size:
+    0.65rem;
+
+}
+
+
+/* ========================= */
+/* GUEST ROWS                */
+/* ========================= */
+
+
+.guest-row {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    32px minmax(0,1fr) auto;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  padding:
+    17px 0;
+
+  border-bottom:
+    1px dashed
+    rgba(125,135,102,0.28);
+
+}
+
+
+.guest-number {
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.15rem;
+
+  font-style:
+    italic;
+
+}
+
+
+.guest-row input {
+
+  color:
+    var(--ink);
+
+  border:
+    1px solid
+    rgba(185,145,75,0.45);
+
+  background:
+    rgba(255,255,255,0.74);
+
+}
+
+
+.guest-row input::placeholder {
+
+  color:
+    #a59a90;
+
+}
+
+
+.guest-row input:disabled {
+
+  color:
+    var(--sage-dark);
+
+  opacity:
+    1;
+
+  background:
+    rgba(125,135,102,0.09);
+
+}
+
+
+/* ========================= */
+/* TOGGLE                    */
+/* ========================= */
+
+
+.attendance-toggle {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    9px;
+
+  color:
+    var(--ink-soft);
+
+  font-size:
+    0.76rem;
+
+}
+
+
+.attendance-toggle input {
+
+  position:
+    absolute;
+
+  width:
+    1px;
+
+  height:
+    1px;
+
+  opacity:
+    0;
+
+}
+
+
+.toggle-track {
+
+  position:
+    relative;
+
+  width:
+    46px;
+
+  height:
+    26px;
+
+  border-radius:
+    999px;
+
+  background:
+    #d5cec5;
+
+  transition:
+    background 0.2s;
+
+}
+
+
+.toggle-track::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  top:
+    4px;
+
+  left:
+    4px;
+
+  width:
+    18px;
+
+  height:
+    18px;
+
+  border-radius:
+    50%;
+
+  background:
+    white;
+
+  box-shadow:
+    0 2px 5px
+    rgba(0,0,0,0.18);
+
+  transition:
+    transform 0.2s;
+
+}
+
+
+.attendance-toggle
+input:checked +
+.toggle-track {
+
+  background:
+    var(--sage);
+
+}
+
+
+.attendance-toggle
+input:checked +
+.toggle-track::after {
+
+  transform:
+    translateX(20px);
+
+  background:
+    var(--ivory);
+
+}
+
+
+/* ERROR */
+
+
+.form-error {
+
+  min-height:
+    20px;
+
+  margin:
+    16px 0 0;
+
+  color:
+    var(--danger);
+
+  font-size:
+    0.82rem;
+
+}
+
+
+/* CONFIRM BUTTON */
+
+
+.confirm-button {
+
+  width:
+    100%;
+
+  margin-top:
+    18px;
+
+  color:
+    var(--white);
+
+  background:
+    var(--sage-dark);
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.20em;
+
+}
+
+
+/* LINK BUTTON */
+
+
+.link-button {
+
+  display:
+    block;
+
+  margin:
+    19px auto 0;
+
+  padding:
+    4px;
+
+  color:
+    var(--sage-dark);
+
+  border:
+    0;
+
+  border-bottom:
+    1px solid currentColor;
+
+  background:
+    none;
+
+  font-size:
+    0.76rem;
+
+}
+
+
+/* ========================= */
+/* CONFIRMATION              */
+/* ========================= */
+
+
+.confirmation-panel {
+
+  position:
+    relative;
+
+  text-align:
+    center;
+
+  background:
+
+    radial-gradient(
+      circle at top right,
+      rgba(223,183,173,0.16),
+      transparent 32%
+    ),
+
+    var(--ivory);
+
+}
+
+
+.confirmation-floral {
+
+  color:
+    var(--blush);
+
+  font-size:
+    1.8rem;
+
+  margin-bottom:
+    7px;
+
+}
+
+
+.checkmark {
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  width:
+    64px;
+
+  height:
+    64px;
+
+  margin:
+    0 auto 20px;
+
+  color:
+    var(--white);
+
+  border:
+    4px solid
+    var(--blush-light);
+
+  border-radius:
+    50%;
+
+  background:
+    var(--sage);
+
+  font-size:
+    1.8rem;
+
+}
+
+
+.confirmation-panel .eyebrow {
+
+  color:
+    var(--sage);
+
+}
+
+
+.confirmation-message {
+
+  color:
+    var(--ink-soft);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.3rem;
+
+  font-style:
+    italic;
+
+}
+
+
+/* CONFIRMATION SUMMARY */
+
+
+.confirmation-card {
+
+  margin:
+    30px 0 18px;
+
+  padding:
+    10px 24px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    14px;
+
+  background:
+    rgba(255,255,255,0.72);
+
+  text-align:
+    left;
+
+  box-shadow:
+    0 10px 30px
+    rgba(76,65,56,0.05);
+
+}
+
+
+.confirmation-card div {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  gap:
+    24px;
+
+  padding:
+    16px 0;
+
+  border-bottom:
+    1px solid
+    rgba(185,145,75,0.20);
+
+}
+
+
+.confirmation-card div:last-child {
+
+  border-bottom:
+    0;
+
+}
+
+
+.confirmation-card span {
+
+  color:
+    var(--sage);
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.13em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.confirmation-card strong {
+
+  color:
+    var(--ink);
+
+  text-align:
+    right;
+
+}
+
+
+.names-summary strong {
+
+  white-space:
+    pre-line;
+
+  line-height:
+    1.7;
+
+}
+
+
+/* ========================= */
+/* COUNTDOWN FOOTER          */
+/* ========================= */
+
+
+footer {
+
+  padding:
+    38px 24px
+    32px;
+
+  color:
+    var(--ink);
+
+  text-align:
+    center;
+
+  background:
+
+    radial-gradient(
+      circle at bottom left,
+      rgba(223,183,173,0.20),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      145deg,
+      #f6eadf,
+      #eee5d4
+    );
+
+  border-top:
+    1px solid
+    rgba(185,145,75,0.32);
+
+}
+
+
+.countdown-eyebrow {
+
+  margin:
+    0 0 5px;
+
+  color:
+    var(--sage);
+
+  font-size:
+    0.62rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.28em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+footer h2 {
+
+  margin:
+    0;
+
+  color:
+    var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    2rem;
+
+  font-style:
+    italic;
+
+  font-weight:
+    500;
+
+}
+
+
+.footer-divider {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  margin:
+    13px auto 22px;
+
+}
+
+
+.footer-divider span {
+
+  width:
+    42px;
+
+  height:
+    1px;
+
+  background:
+    var(--gold-light);
+
+}
+
+
+.footer-divider b {
+
+  color:
+    var(--blush);
+
+  font-size:
+    0.7rem;
+
+}
+
+
+/* COUNTDOWN NUMBERS */
+
+
+.countdown {
+
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  max-width:
+    500px;
+
+  margin:
+    0 auto;
+
+}
+
+
+.countdown-item {
+
+  min-width:
+    68px;
+
+}
+
+
+.countdown-item strong {
+
+  display:
+    block;
+
+  color:
+    var(--sage-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    2.2rem;
+
+  font-weight:
+    600;
+
+  line-height:
+    1;
+
+}
+
+
+.countdown-item span {
+
+  display:
+    block;
+
+  margin-top:
+    7px;
+
+  color:
+    var(--ink-soft);
+
+  font-size:
+    0.52rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.15em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.countdown-separator {
+
+  padding-top:
+    3px;
+
+  color:
+    var(--blush);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.7rem;
+
+}
+
+
+.footer-date {
+
+  margin:
+    25px 0 0;
+
+  color:
+    var(--ink-soft);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1rem;
+
+}
+
+
+.footer-date span {
+
+  margin:
+    0 8px;
+
+  color:
+    var(--gold);
+
+}
+
+
+.footer-note {
+
+  margin:
+    9px 0 0;
+
+  color:
+    var(--sage-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.05rem;
+
+  font-style:
+    italic;
+
+}
+
+
+.footer-note span {
+
+  margin:
+    0 5px;
+
+  color:
+    var(--blush);
+
+}
+
+
+/* ========================= */
+/* UTILITY                   */
+/* ========================= */
+
+
+.hidden {
+
+  display:
+    none !important;
+
+}
+
+
+/* ========================= */
+/* MOBILE                    */
+/* ========================= */
+
+
+@media (max-width: 620px) {
+
+  body {
+
+    background:
+      var(--ivory);
+
+  }
+
+
+  .page-shell {
+
+    padding:
+      0;
+
+  }
+
+
+  .invitation-card {
+
+    border:
+      0;
+
+    border-radius:
+      0;
+
+    box-shadow:
+      none;
+
+  }
+
+
+  .hero {
+
+    padding:
+      44px 22px
+      38px;
+
+  }
+
+
+  .hero::before {
+
+    inset:
+      10px;
+
+  }
+
+
+  .monogram {
+
+    width:
+      62px;
+
+    height:
+      62px;
+
+    margin-bottom:
+      18px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      clamp(
+        2.75rem,
+        14vw,
+        4rem
+      );
+
+  }
+
+
+  .wedding-details {
+
+    flex-direction:
+      column;
+
+    gap:
+      14px;
+
+  }
+
+
+  .wedding-detail {
+
+    padding:
+      3px;
+
+  }
+
+
+  .detail-separator {
+
+    width:
+      75px;
+
+    height:
+      1px;
+
+    margin:
+      0 auto;
+
+    background:
+      var(--gold-light);
+
+  }
+
+
+  .search-section,
+  .confirmation-panel {
+
+    padding:
+      35px 22px;
+
+  }
+
+
+  .search-row {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .search-row button {
+
+    width:
+      100%;
+
+  }
+
+
+  #rsvpForm {
+
+    padding:
+      38px 22px
+      40px;
+
+  }
+
+
+  .guest-row {
+
+    grid-template-columns:
+      25px
+      minmax(0,1fr);
+
+  }
+
+
+  .attendance-toggle {
+
+    grid-column:
+      2;
+
+    justify-self:
+      end;
+
+  }
+
+
+  .confirmation-card div {
+
+    gap:
+      12px;
+
+  }
+
+
+  .countdown {
+
+    gap:
+      5px;
+
+  }
+
+
+  .countdown-item {
+
+    min-width:
+      54px;
+
+  }
+
+
+  .countdown-item strong {
+
+    font-size:
+      1.75rem;
+
+  }
+
+
+  .countdown-separator {
+
+    font-size:
+      1.4rem;
+
+  }
+
+}
+
+
+/* SMALL PHONES */
+
+
+@media (max-width: 390px) {
+
+  .eyebrow {
+
+    letter-spacing:
+      0.22em;
+
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      2.8rem;
+
+  }
+
+
+  .intro {
+
+    font-size:
+      1.18rem;
+
+  }
+
+
+  .countdown-item {
+
+    min-width:
+      47px;
+
+  }
+
+
+  .countdown-item strong {
+
+    font-size:
+      1.55rem;
+
+  }
+
+
+  .countdown-item span {
+
+    font-size:
+      0.46rem;
+
+  }
+
+}
