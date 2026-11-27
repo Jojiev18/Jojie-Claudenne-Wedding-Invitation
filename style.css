@@ -2266,3 +2266,576 @@ footer h2 {
   }
 
 }
+
+/* ============================================= */
+/* ELEGANT SEARCH INPUT                         */
+/* ============================================= */
+
+.guest-search-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+
+/* Search icon */
+
+.search-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 18px;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #a69778;
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.search-icon svg {
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+.guest-search-wrap input {
+  position: relative;
+
+  z-index: 1;
+
+  height: 58px;
+
+  padding:
+    16px 45px
+    16px 54px;
+
+  border:
+    1px solid
+    rgba(185, 145, 75, 0.48);
+
+  border-radius: 11px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  caret-color:
+    var(--sage-dark);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.guest-search-wrap input::placeholder {
+  color: #ad9f95;
+
+  font-size: 0.94rem;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/*
+  When the guest clicks the search field,
+  the placeholder gently shifts.
+*/
+
+.guest-search-wrap
+input:focus::placeholder {
+  opacity: 0.55;
+
+  transform:
+    translateX(4px);
+}
+
+
+.guest-search-wrap
+input:focus {
+  border-color:
+    var(--sage);
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 7px 22px
+    rgba(93, 103, 76, 0.10);
+
+  outline: none;
+}
+
+
+/* Search icon changes when field is active */
+
+.guest-search-wrap:focus-within
+.search-icon {
+  color:
+    var(--sage-dark);
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+
+/* ============================================= */
+/* ANIMATED SEARCH LINE                         */
+/* ============================================= */
+
+.search-focus-line {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--sage),
+      var(--gold),
+      var(--blush)
+    );
+
+  pointer-events: none;
+
+  transform:
+    translateX(-50%);
+
+  transition:
+    width 0.35s ease;
+}
+
+
+.guest-search-wrap:focus-within
+.search-focus-line {
+  width:
+    calc(100% - 28px);
+}
+
+
+/* ============================================= */
+/* FIND INVITATION BUTTON                       */
+/* ============================================= */
+
+#searchButton {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 58px;
+
+  padding:
+    0 28px;
+
+  border:
+    1px solid
+    rgba(93, 103, 76, 0.20);
+
+  background:
+    linear-gradient(
+      135deg,
+      #6f795a,
+      #596448
+    );
+
+  box-shadow:
+    0 8px 20px
+    rgba(93, 103, 76, 0.14);
+}
+
+
+#searchButton::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      105deg,
+      transparent,
+      rgba(255,255,255,0.20),
+      transparent
+    );
+
+  transition:
+    left 0.55s ease;
+}
+
+
+#searchButton:hover::before {
+  left: 130%;
+}
+
+
+/* ============================================= */
+/* FALLING WEDDING PETALS                       */
+/* ============================================= */
+
+.petal-container {
+  position: fixed;
+
+  z-index: 20;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+.petal {
+  position: absolute;
+
+  top: -8vh;
+
+  display: block;
+
+  color: #e5b9b0;
+
+  opacity: 0;
+
+  font-family: serif;
+
+  line-height: 1;
+
+  text-shadow:
+    0 2px 5px
+    rgba(132, 93, 82, 0.09);
+
+  animation-name:
+    weddingPetalFall;
+
+  animation-timing-function:
+    linear;
+
+  animation-iteration-count:
+    infinite;
+}
+
+
+/*
+  Each petal has different:
+  - size
+  - starting position
+  - speed
+  - delay
+
+  This prevents the animation from
+  looking repetitive.
+*/
+
+.petal-1 {
+  left: 8%;
+
+  font-size: 14px;
+
+  animation-duration: 14s;
+  animation-delay: -2s;
+}
+
+
+.petal-2 {
+  left: 19%;
+
+  color: #dca99f;
+
+  font-size: 10px;
+
+  animation-duration: 18s;
+  animation-delay: -11s;
+}
+
+
+.petal-3 {
+  left: 31%;
+
+  color: #aeb398;
+
+  font-size: 15px;
+
+  animation-duration: 16s;
+  animation-delay: -5s;
+}
+
+
+.petal-4 {
+  left: 44%;
+
+  font-size: 11px;
+
+  animation-duration: 20s;
+  animation-delay: -14s;
+}
+
+
+.petal-5 {
+  left: 57%;
+
+  color: #d8a9a0;
+
+  font-size: 13px;
+
+  animation-duration: 15s;
+  animation-delay: -7s;
+}
+
+
+.petal-6 {
+  left: 68%;
+
+  color: #aeb398;
+
+  font-size: 10px;
+
+  animation-duration: 19s;
+  animation-delay: -3s;
+}
+
+
+.petal-7 {
+  left: 77%;
+
+  font-size: 14px;
+
+  animation-duration: 17s;
+  animation-delay: -12s;
+}
+
+
+.petal-8 {
+  left: 88%;
+
+  color: #cca298;
+
+  font-size: 11px;
+
+  animation-duration: 21s;
+  animation-delay: -8s;
+}
+
+
+.petal-9 {
+  left: 95%;
+
+  color: #a7ae90;
+
+  font-size: 12px;
+
+  animation-duration: 18s;
+  animation-delay: -16s;
+}
+
+
+@keyframes weddingPetalFall {
+
+  0% {
+    transform:
+      translate3d(
+        0,
+        -10vh,
+        0
+      )
+      rotate(0deg);
+
+    opacity: 0;
+  }
+
+
+  8% {
+    opacity: 0.58;
+  }
+
+
+  25% {
+    transform:
+      translate3d(
+        18px,
+        25vh,
+        0
+      )
+      rotate(80deg);
+  }
+
+
+  50% {
+    transform:
+      translate3d(
+        -16px,
+        52vh,
+        0
+      )
+      rotate(180deg);
+  }
+
+
+  75% {
+    transform:
+      translate3d(
+        20px,
+        79vh,
+        0
+      )
+      rotate(270deg);
+  }
+
+
+  92% {
+    opacity: 0.45;
+  }
+
+
+  100% {
+    transform:
+      translate3d(
+        -10px,
+        108vh,
+        0
+      )
+      rotate(360deg);
+
+    opacity: 0;
+  }
+}
+
+
+/* ============================================= */
+/* MOBILE SEARCH IMPROVEMENTS                    */
+/* ============================================= */
+
+@media (max-width: 620px) {
+
+  .search-section {
+    padding:
+      38px 24px
+      40px;
+  }
+
+
+  .search-row {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  .guest-search-wrap {
+    width: 100%;
+  }
+
+
+  .guest-search-wrap input {
+    height: 58px;
+
+    padding:
+      15px 18px
+      15px 50px;
+
+    font-size: 16px;
+  }
+
+
+  /*
+    16px is intentional.
+    iPhone browsers can zoom automatically
+    when focusing inputs smaller than 16px.
+  */
+
+  .guest-search-wrap
+  input::placeholder {
+    font-size: 16px;
+  }
+
+
+  #searchButton {
+    width: 100%;
+
+    min-height: 58px;
+  }
+
+
+  /*
+    Fewer / softer petals on mobile
+    so the RSVP remains clean.
+  */
+
+  .petal {
+    opacity: 0;
+
+    transform:
+      scale(0.85);
+  }
+
+
+  .petal-2,
+  .petal-4,
+  .petal-6,
+  .petal-8 {
+    display: none;
+  }
+
+}
+
+
+/* ============================================= */
+/* REDUCED MOTION ACCESSIBILITY                  */
+/* ============================================= */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  .petal {
+    display: none;
+  }
+
+
+  .search-focus-line,
+  .search-icon,
+  .guest-search-wrap input,
+  #searchButton::before {
+    transition: none;
+  }
+
+}
+
+
