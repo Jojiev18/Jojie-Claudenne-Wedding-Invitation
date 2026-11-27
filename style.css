@@ -2838,4 +2838,83 @@ input:focus {
 
 }
 
+/* ========================================= */
+/* WEDDING DETAILS - ALWAYS TWO COLUMNS     */
+/* ========================================= */
 
+.wedding-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+.wedding-detail {
+  min-width: 0;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.detail-separator {
+  display: none;
+}
+
+.wedding-detail:first-child {
+  border-right: 1px solid var(--gold-light);
+}
+
+.wedding-detail strong {
+  font-size: clamp(1rem, 3vw, 1.45rem);
+  line-height: 1.25;
+}
+
+.wedding-detail small {
+  font-size: 0.95rem;
+}
+
+
+/* ========================================= */
+/* MOBILE - KEEP TWO COLUMNS                */
+/* ========================================= */
+
+@media (max-width: 620px) {
+
+  .wedding-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .wedding-detail {
+    padding: 8px 7px;
+  }
+
+  .wedding-detail:first-child {
+    border-right: 1px solid var(--gold-light);
+  }
+
+  .detail-separator {
+    display: none;
+  }
+
+  .detail-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+
+  .wedding-detail strong {
+    font-size: clamp(0.95rem, 4vw, 1.25rem);
+    line-height: 1.25;
+    overflow-wrap: break-word;
+  }
+
+  .wedding-detail small {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+}
