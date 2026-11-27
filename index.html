@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Jojie and Claudenne Wedding RSVP"
+  >
+  <title>Jojie & Claudenne | Wedding RSVP</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="page-shell">
+
+    <section
+      class="invitation-card"
+      aria-labelledby="page-title"
+    >
+
+      <!-- ============================= -->
+      <!-- HERO / WEDDING INFORMATION    -->
+      <!-- ============================= -->
+
+      <header class="hero">
+
+        <div class="hero-decoration hero-decoration-left"></div>
+        <div class="hero-decoration hero-decoration-right"></div>
+
+        <div class="monogram" aria-hidden="true">
+          <span>J</span>
+          <i>♥</i>
+          <span>C</span>
+        </div>
+
+        <p class="eyebrow">
+          Together with their families
+        </p>
+
+        <h1 id="page-title">
+          Jojie
+          <span>&amp;</span>
+          Claudenne
+        </h1>
+
+        <div class="wedding-divider" aria-hidden="true">
+          <span></span>
+          <b>❦</b>
+          <span></span>
+        </div>
+
+        <!-- WEDDING DATE & LOCATION -->
+
+        <div class="wedding-details">
+
+          <div class="wedding-detail">
+            <span class="detail-label">
+              The Wedding
+            </span>
+
+            <strong>
+              January 29, 2027
+            </strong>
+
+            <small>
+              Friday
+            </small>
+          </div>
+
+          <div
+            class="detail-separator"
+            aria-hidden="true"
+          ></div>
+
+          <div class="wedding-detail">
+            <span class="detail-label">
+              Venue
+            </span>
+
+            <strong>
+              Grandiya Hotel
+            </strong>
+
+            <small>
+              Wedding Celebration
+            </small>
+          </div>
+
+        </div>
+
+        <div class="ornament" aria-hidden="true">
+          <span></span>
+          <b>✦</b>
+          <span></span>
+        </div>
+
+        <p class="intro">
+          Every seat is reserved with love.
+          <br>
+          Please confirm your attendance below.
+        </p>
+
+      </header>
+
+
+      <!-- ============================= -->
+      <!-- GUEST SEARCH                  -->
+      <!-- ============================= -->
+
+      <section
+        class="search-section"
+        id="searchSection"
+      >
+
+        <p class="section-kicker">
+          Kindly Respond
+        </p>
+
+        <label for="guestSearch">
+          Primary Guest Name
+        </label>
+
+        <div class="search-row">
+
+          <input
+            id="guestSearch"
+            type="text"
+            autocomplete="name"
+            placeholder="Type your first name and last name"
+            aria-describedby="searchMessage"
+          >
+
+          <button
+            id="searchButton"
+            type="button"
+          >
+            Find Invitation
+          </button>
+
+        </div>
+
+        <p
+          id="searchMessage"
+          class="status-message"
+          aria-live="polite"
+        >
+          Enter the name written on the invitation.
+        </p>
+
+      </section>
+
+
+      <!-- ============================= -->
+      <!-- RSVP PANEL                    -->
+      <!-- ============================= -->
+
+      <section
+        id="rsvpPanel"
+        class="rsvp-panel hidden"
+        aria-live="polite"
+      >
+
+        <!-- RESERVED SEATS -->
+
+        <div class="seat-summary">
+
+          <div class="small-flourish" aria-hidden="true">
+            ❦
+          </div>
+
+          <p>
+            Seats Reserved in Your Honor
+          </p>
+
+          <strong id="seatCount">
+            0
+          </strong>
+
+          <span>
+            Total seat(s), including the primary guest
+          </span>
+
+        </div>
+
+
+        <!-- RSVP FORM -->
+
+        <form
+          id="rsvpForm"
+          novalidate
+        >
+
+          <div class="section-heading">
+
+            <p class="section-kicker">
+              Your Party
+            </p>
+
+            <h2>
+              Confirm Attendance
+            </h2>
+
+            <div
+              class="mini-divider"
+              aria-hidden="true"
+            >
+              <span></span>
+              <b>✦</b>
+              <span></span>
+            </div>
+
+            <p>
+              Enter the names of the guests who will attend.
+              Empty rows will be marked as not attending.
+            </p>
+
+          </div>
+
+
+          <div
+            id="guestRows"
+            class="guest-rows"
+          ></div>
+
+
+          <p
+            id="formError"
+            class="form-error"
+            role="alert"
+          ></p>
+
+
+          <button
+            id="submitButton"
+            class="confirm-button"
+            type="submit"
+          >
+            Confirm RSVP
+          </button>
+
+
+          <button
+            id="changeGuestButton"
+            class="link-button"
+            type="button"
+          >
+            Search a different guest
+          </button>
+
+        </form>
+
+      </section>
+
+
+      <!-- ============================= -->
+      <!-- CONFIRMATION                  -->
+      <!-- ============================= -->
+
+      <section
+        id="confirmationPanel"
+        class="confirmation-panel hidden"
+        aria-live="polite"
+      >
+
+        <div
+          class="confirmation-floral"
+          aria-hidden="true"
+        >
+          ❦
+        </div>
+
+        <div
+          class="checkmark"
+          aria-hidden="true"
+        >
+          ✓
+        </div>
+
+
+        <p class="eyebrow">
+          Thank You
+        </p>
+
+
+        <h2>
+          Your response has been received.
+        </h2>
+
+
+        <div
+          class="mini-divider"
+          aria-hidden="true"
+        >
+          <span></span>
+          <b>✦</b>
+          <span></span>
+        </div>
+
+
+        <p class="confirmation-message">
+          We can’t wait to celebrate with you!
+        </p>
+
+
+        <div class="confirmation-card">
+
+          <div>
+            <span>
+              Primary Guest
+            </span>
+
+            <strong id="summaryPrimary"></strong>
+          </div>
+
+
+          <div>
+            <span>
+              Reserved Seats
+            </span>
+
+            <strong id="summaryReserved"></strong>
+          </div>
+
+
+          <div>
+            <span>
+              Attending
+            </span>
+
+            <strong id="summaryAttending"></strong>
+          </div>
+
+
+          <div class="names-summary">
+
+            <span>
+              Guest Name(s)
+            </span>
+
+            <strong id="summaryNames"></strong>
+
+          </div>
+
+        </div>
+
+
+        <button
+          id="editRsvpButton"
+          class="confirm-button"
+          type="button"
+        >
+          Edit RSVP
+        </button>
+
+
+        <button
+          id="newSearchButton"
+          class="link-button"
+          type="button"
+        >
+          Search another invitation
+        </button>
+
+      </section>
+
+
+      <!-- ============================= -->
+      <!-- COUNTDOWN                     -->
+      <!-- ============================= -->
+
+      <footer>
+
+        <p class="countdown-eyebrow">
+          Counting Down To
+        </p>
+
+        <h2>
+          Our Special Day
+        </h2>
+
+        <div
+          class="footer-divider"
+          aria-hidden="true"
+        >
+          <span></span>
+          <b>♥</b>
+          <span></span>
+        </div>
+
+
+        <div
+          id="countdown"
+          class="countdown"
+        >
+
+          <div class="countdown-item">
+            <strong id="countdownDays">
+              000
+            </strong>
+            <span>Days</span>
+          </div>
+
+
+          <div class="countdown-separator">
+            :
+          </div>
+
+
+          <div class="countdown-item">
+            <strong id="countdownHours">
+              00
+            </strong>
+            <span>Hours</span>
+          </div>
+
+
+          <div class="countdown-separator">
+            :
+          </div>
+
+
+          <div class="countdown-item">
+            <strong id="countdownMinutes">
+              00
+            </strong>
+            <span>Minutes</span>
+          </div>
+
+
+          <div class="countdown-separator">
+            :
+          </div>
+
+
+          <div class="countdown-item">
+            <strong id="countdownSeconds">
+              00
+            </strong>
+            <span>Seconds</span>
+          </div>
+
+        </div>
+
+
+        <p class="footer-date">
+          January 29, 2027
+          <span>•</span>
+          Grandiya Hotel
+        </p>
+
+
+        <p class="footer-note">
+          Jojie
+          <span>♥</span>
+          Claudenne
+        </p>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
